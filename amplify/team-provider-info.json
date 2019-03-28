@@ -1,0 +1,19 @@
+{
+    "nodejs": {
+        "awscloudformation": {
+            "AuthRoleName": "reactamplifynotetake-20190328201402-authRole",
+            "UnauthRoleArn": "arn:aws:iam::734739223659:role/reactamplifynotetake-20190328201402-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::734739223659:role/reactamplifynotetake-20190328201402-authRole",
+            "Region": "eu-central-1",
+            "DeploymentBucketName": "reactamplifynotetake-20190328201402-deployment",
+            "UnauthRoleName": "reactamplifynotetake-20190328201402-unauthRole",
+            "StackName": "reactamplifynotetake-20190328201402",
+            "StackId": "arn:aws:cloudformation:eu-central-1:734739223659:stack/reactamplifynotetake-20190328201402/447c7c60-5185-11e9-9a86-06aac4edf424"
+        },
+        "categories": {
+            "auth": {
+                "cognitoe0676116": {}
+            }
+        }
+    }
+}
