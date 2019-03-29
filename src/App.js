@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withAuthenticator } from 'aws-amplify-react'
-import NoteCreate from './components/note-create';
+import NoteCreate from './components/note-create'
+import './App.css'
 
 class App extends Component {
   render() {

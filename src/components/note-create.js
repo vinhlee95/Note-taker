@@ -10,20 +10,22 @@ function NoteCreate() {
 	useEffect(() => {
 		async function getNotes() {
 			const res = await API.graphql(graphqlOperation(listNotes))
-			console.log(res.data)
 			setNoteList(res.data.listNotes.items)
 		}
 
 		getNotes()
 	}, [noteList.length])
 
-	const submitContent = (e) => {
+	const submitContent = async (e) => {
 		e.preventDefault();
 		const input = {
 			title: "New note",
 			content,
 		}
-		API.graphql(graphqlOperation(createNote, {input}))
+		const res = await API.graphql(graphqlOperation(createNote, {input}))
+		const newNote = res.data.createNote;
+		setNoteList([newNote])
+		setContent([''])
 	}
 
 	const renderNoteList = () => noteList.map((noteItem) => {
