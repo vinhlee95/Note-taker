@@ -1,28 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { withAuthenticator } from 'aws-amplify-react'
+import NoteCreate from './components/note-create';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+				<h1>Create your notes</h1>
+				<NoteCreate />
+			</div>
     );
   }
 }
 
-export default App;
+export default withAuthenticator(App, { includeGreetings: true });
