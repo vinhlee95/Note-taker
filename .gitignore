@@ -34,3 +34,4 @@ aws-exports.js
 awsconfiguration.json
 
 package-lock.json
+yarn.lock
